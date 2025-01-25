@@ -64,11 +64,11 @@ Jeśli chcesz dowiedzieć się więcej, przejdź na stronę [dokumentacji OpenCV
 
 
         if metoda_detekcji == "Haar_faces":
-            cascade_path = "/workspaces/automatyczna_detekcja_osob/haar/haarcascade_frontalface_alt2.xml"
+            cascade_path = r"/workspaces/automatyczna_detekcja_osob/haar/haarcascade_frontalface_alt2.xml"
         elif metoda_detekcji == "Haar_eyes":
-            cascade_path = "/workspaces/automatyczna_detekcja_osob/haar/haarcascade_eye.xml"
+            cascade_path = r"/workspaces/automatyczna_detekcja_osob/haar/haarcascade_eye.xml"
         else:
-            cascade_path = "/workspaces/automatyczna_detekcja_osob/haar/haarcascade_fullbody.xml"
+            cascade_path = r"/workspaces/automatyczna_detekcja_osob/haar/haarcascade_fullbody.xml"
 
         klasyfikator = cv2.CascadeClassifier(cascade_path)
         wykryte_osoby = klasyfikator.detectMultiScale(img_g, scaleFactor=1.1, minNeighbors=int(minNs))
