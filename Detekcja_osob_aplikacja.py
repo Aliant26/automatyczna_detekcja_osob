@@ -96,6 +96,3 @@ sentiment_mapping = ["1", "2", "3", "4", "5"]
 selected = st.feedback("stars")
 if selected is not None:
     st.markdown(f"Twoja ocena to: {sentiment_mapping[selected]} :star2:")
-
-
-
