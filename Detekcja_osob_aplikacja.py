@@ -62,12 +62,13 @@ Jeśli chcesz dowiedzieć się więcej, przejdź na stronę [dokumentacji OpenCV
         format="%d")
         st.write("Pamiętaj, aby wcisnąć :red[***ENTER***] po zmianie wartości minNeighbors!")
 
+
         if metoda_detekcji == "Haar_faces":
-            cascade_path = "haar\haarcascade_frontalface_alt2.xml"
+            cascade_path = "/workspaces/automatyczna_detekcja_osob/haar/haarcascade_frontalface_alt2.xml"
         elif metoda_detekcji == "Haar_eyes":
-            cascade_path = "haar\haarcascade_eye.xml"
+            cascade_path = "/workspaces/automatyczna_detekcja_osob/haar/haarcascade_eye.xml"
         else:
-            cascade_path = "haar\haarcascade_fullbody.xml"
+            cascade_path = "/workspaces/automatyczna_detekcja_osob/haar/haarcascade_fullbody.xml"
 
         klasyfikator = cv2.CascadeClassifier(cascade_path)
         wykryte_osoby = klasyfikator.detectMultiScale(img_g, scaleFactor=1.1, minNeighbors=int(minNs))
