@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import cv2
+import opencv as cv2
 from PIL import Image
 
 #włączenie pełnej szerokosci strony
